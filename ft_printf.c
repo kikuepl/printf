@@ -6,7 +6,7 @@
 /*   By: sytorium <sytorium@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 16:22:38 by sytorium          #+#    #+#             */
-/*   Updated: 2024/06/05 20:50:20 by sytorium         ###   ########.fr       */
+/*   Updated: 2024/06/07 21:51:16 by sytorium         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,12 @@ int ft_printf(const char *format, ...)
                     ft_putnbr_fd(n,1);
                     break;
                 }
+                case 'p':
+                {
+                    void *ptr = va_arg(args, void *);
+                    res += ft_unko(ptr);
+                    break;
+                }
             }
         } else
         {
@@ -80,8 +86,10 @@ int ft_printf(const char *format, ...)
 
 // int main()
 // {
-//     int siz1 = ft_printf("%s", (char *)NULL);
-//     int siz2 = printf("%s", (char *)NULL);
+//     // int siz1 = ft_printf("%s", (char *)NULL);
+//     // int siz2 = printf("%s", (char *)NULL);
+//     int siz1 = ft_printf("    %p\n", -1);
+//     int siz2 = printf("    %p\n", -1);
 //     printf("%d\n", siz1);
 //     printf("%d\n", siz2);
 //     // ft_printf("%s\n", "Hello World");

@@ -6,7 +6,7 @@
 /*   By: sytorium <sytorium@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 16:19:51 by sytorium          #+#    #+#             */
-/*   Updated: 2024/06/05 20:49:34 by sytorium         ###   ########.fr       */
+/*   Updated: 2024/06/07 21:45:06 by sytorium         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 size_t	ft_strlen(const char *s);
 int	ft_numdigit(long long n);
+int    ft_unko(void *ptr);
 
 #endif
