@@ -6,7 +6,7 @@
 /*   By: sytorium <sytorium@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 16:22:38 by sytorium          #+#    #+#             */
-/*   Updated: 2024/06/07 21:51:16 by sytorium         ###   ########.fr       */
+/*   Updated: 2024/06/17 18:30:05 by sytorium         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,31 @@ int ft_printf(const char *format, ...)
                     res += ft_unko(ptr);
                     break;
                 }
+                case 'u':
+                {
+                    unsigned int n = va_arg(args, unsigned int);
+                    res += ft_numdigit(n);
+                    ft_putunbr_fd(n,1);
+                    break;
+                }
+                case 'x':
+                {
+                    unsigned long n = va_arg(args, unsigned long);
+                    res += ft_chinko(n);
+                    break;
+                }
+                case 'X':
+                {
+                    unsigned long n = va_arg(args, unsigned long);
+                    res += ft_manko(n);
+                    break;
+                }
+                case '%':
+                {
+                    ft_putchar_fd(*format, 1);
+                    res++;
+                    break;
+                }
             }
         } else
         {
@@ -88,8 +113,8 @@ int ft_printf(const char *format, ...)
 // {
 //     // int siz1 = ft_printf("%s", (char *)NULL);
 //     // int siz2 = printf("%s", (char *)NULL);
-//     int siz1 = ft_printf("    %p\n", -1);
-//     int siz2 = printf("    %p\n", -1);
+//     int siz1 = ft_printf("    %%\n");
+//     int siz2 = printf("    %%\n");
 //     printf("%d\n", siz1);
 //     printf("%d\n", siz2);
 //     // ft_printf("%s\n", "Hello World");

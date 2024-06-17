@@ -1,4 +1,5 @@
 *
+main.c
 !.gitignore
 !ft_*.c
 !ft_*.h

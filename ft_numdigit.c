@@ -6,15 +6,15 @@
 /*   By: sytorium <sytorium@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:45:05 by sytorium          #+#    #+#             */
-/*   Updated: 2024/06/05 20:49:25 by sytorium         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:36:12 by sytorium         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_numdigit(long long n)
+long long	ft_numdigit(long long n)
 {
-	int	res;
+	long long res;
 
 	res = (n <= 0);
 	if (n < 0)
