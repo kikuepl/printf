@@ -6,7 +6,7 @@
 /*   By: sytorium <sytorium@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 16:22:38 by sytorium          #+#    #+#             */
-/*   Updated: 2024/06/21 21:51:36 by sytorium         ###   ########.fr       */
+/*   Updated: 2024/06/21 22:41:05 by sytorium         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,3 +64,12 @@ int	printf2(char format, va_list args)
 	else
 		return (0);
 }
+/*
+int main()
+{
+	int siz1 = ft_printf("%x\n",LONG_MIN);
+	int siz2 = printf("%x\n",LONG_MIN);
+	printf("siz1 %d, siz2 %d", siz1, siz2);
+	return 0;
+}
+*/
