@@ -6,7 +6,7 @@
 /*   By: sytorium <sytorium@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 16:19:51 by sytorium          #+#    #+#             */
-/*   Updated: 2024/06/17 18:13:27 by sytorium         ###   ########.fr       */
+/*   Updated: 2024/06/21 21:48:57 by sytorium         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,24 @@
 # include <stdarg.h>
 
 int ft_printf(const char *format, ...);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *s, int fd);
-size_t	ft_strlen(const char *s);
-long long	ft_numdigit(long long n);
-int    ft_unko(void *ptr);
-void	ft_putunbr_fd(long long n, int fd);
-int    ft_chinko(unsigned long ptr);
-int ft_manko(unsigned long num);
+size_t	ft_putchar_fd(char c, int fd);
+size_t	ft_putnbr_fd(int n, int fd);
+size_t	ft_putstr_fd(char *s, int fd);
+size_t	ft_numdigit(long long n);
+size_t	ft_putunbr_fd(long long n, int fd);
+int ft_put_hex_lower(unsigned long num);
+int    ft_put_hex_upper(unsigned long num);
+int    ft_ptr(void *ptr);
 void ft_toupper_str(char *str);
-
+size_t	ft_strlen(const char *s);
+int ft_handle_char(va_list args);
+int ft_handle_string(va_list args);
+int ft_handle_int(va_list args);
+int ft_handle_unsigned(va_list args);
+int ft_handle_pointer(va_list args);
+int hex_lower(va_list args);
+int hex_upper(va_list args);
+int	printf1(char format, va_list args);
+int	printf2(char format, va_list args);
 
 #endif

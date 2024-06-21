@@ -1,6 +1,6 @@
 NAME = libftprintf.a
-SRCS = ft_printf.c ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_strlen.c\
-		ft_numdigit.c ft_unko.c 
+SRCS = ft_printf.c ft_utils.c ft_utils_puts.c ft_utils_puts2.c ft_utils_handle.c\
+	  	ft_utils_handle2.c 
 OBJS = $(SRCS:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
