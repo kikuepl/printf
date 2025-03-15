@@ -20,7 +20,7 @@ int	ft_ptr(void *ptr)
 	int				digit;
 
 	if (!ptr)
-		return (ft_printf("0x0"));
+		return (ft_printf("(nil)"));
 	addr = (unsigned long)ptr;
 	pos = 19;
 	buffer[pos--] = '\0';
